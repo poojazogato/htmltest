@@ -44,6 +44,11 @@
 			scrollSection(e)
 		};
 
+		function navigateTo(section) {
+			viewSection = section;
+			$('#' + viewSection).get(0).scrollIntoView();
+		}
+
 		function scrollSection(e) {
 			window.clearTimeout(timer);
 			timer = setTimeout(function () {
